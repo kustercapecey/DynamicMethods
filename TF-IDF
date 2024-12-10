@@ -1,0 +1,21 @@
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+# 示例文档
+documents = [
+    "The cat sat on the mat.",
+    "The quick brown fox jumps over the lazy dog.",
+    "The dog chased the cat through the yard.",
+]
+
+# 初始化 TF-IDF 向量化器
+vectorizer = TfidfVectorizer()
+tfidf_matrix = vectorizer.fit_transform(documents)
+
+# 获取关键词及其权重
+feature_names = vectorizer.get_feature_names_out()
+for i, doc in enumerate(documents):
+    print(f"\nDocument {i+1}:")
+    scores = zip(feature_names, tfidf_matrix[i].toarray()[0])
+    sorted_scores = sorted(scores, key=lambda x: x[1], reverse=True)
+    for term, score in sorted_scores[:5]:
+        print(f"  {term}: {score:.4f}")
