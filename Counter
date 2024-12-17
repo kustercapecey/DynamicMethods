@@ -1,0 +1,26 @@
+class Counter
+  def initialize
+    @count = 0
+  end
+
+  def increment
+    @count += 1
+    puts "Counter incremented to #{@count}"
+  end
+
+  def decrement
+    @count -= 1
+    puts "Counter decremented to #{@count}"
+  end
+
+  def reset
+    @count = 0
+    puts "Counter reset to #{@count}"
+  end
+end
+
+counter = Counter.new
+counter.increment
+counter.increment
+counter.decrement
+counter.reset
