@@ -1,0 +1,13 @@
+import java.net.HttpURLConnection
+import java.net.URL
+
+fun main() {
+    val url = URL("https://jsonplaceholder.typicode.com/posts/1")
+    with(url.openConnection() as HttpURLConnection) {
+        requestMethod = "GET"
+        println("Response Code: $responseCode")
+        inputStream.bufferedReader().use {
+            println(it.readText())
+        }
+    }
+}
