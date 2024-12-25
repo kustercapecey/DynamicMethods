@@ -1,0 +1,10 @@
+import kotlinx.coroutines.*
+
+fun main() = runBlocking {
+    println("Timer started")
+    repeat(5) {
+        delay(1000)
+        println("Tick ${it + 1}")
+    }
+    println("Timer ended")
+}
