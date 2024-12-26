@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>倒计时: <span id="timer"></span></h1>
+    <script>
+        let time = 10;
+        const timer = document.getElementById('timer');
+        timer.innerText = time;
+
+        const countdown = setInterval(() => {
+            time--;
+            timer.innerText = time;
+            if (time <= 0) {
+                clearInterval(countdown);
+                timer.innerText = "时间到！";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
