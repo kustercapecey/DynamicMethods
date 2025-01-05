@@ -1,0 +1,10 @@
+def castle_path():
+    print("You approach the mysterious castle. The gates creak open as you push them.")
+    print("Inside, you see a grand hall and a spiral staircase.")
+    print("1. Explore the grand hall.")
+    print("2. Climb the spiral staircase.")
+    choice = input("Enter 1 or 2: ")
+    if choice == '1':
+        print("You find a banquet table filled with delicious food. But is it safe?")
+    else:
+        print("You climb the staircase and discover a magical library full of ancient tomes!")
