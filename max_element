@@ -1,0 +1,13 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int arr[] = {7, 2, 5, 10, 8};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    int maxDiff = *max_element(arr, arr + n) - *min_element(arr, arr + n);
+
+    cout << "数组的最大差值是: " << maxDiff << endl;
+    return 0;
+}
