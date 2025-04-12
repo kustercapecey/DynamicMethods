@@ -1,0 +1,6 @@
+#!/bin/bash
+src="/home/user/documents"
+dest="/backup/$(date +%Y%m%d_%H%M%S)"
+mkdir -p "$dest"
+cp -r "$src" "$dest"
+echo "Backup completed: $dest"
