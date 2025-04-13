@@ -1,0 +1,11 @@
+import Control.Monad
+import System.IO
+
+main :: IO ()
+main = do
+    putStrLn "Enter a number:"
+    num <- readLn
+    when (num > 10) $ do
+        putStrLn "That's a big number!"
+    unless (num > 10) $ do
+        putStrLn "That's a small number!"
