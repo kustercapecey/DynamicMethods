@@ -1,0 +1,4 @@
+img = imread('peppers.png');
+gray = rgb2gray(img);
+edges = edge(gray, 'Canny');
+imshow(edges);
